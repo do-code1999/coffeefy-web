@@ -17,6 +17,7 @@ html{
 }
 
 body{
+
   overflow-x: hidden;
 }
 
@@ -383,9 +384,5 @@ button:active{
   width: 25%;
   height: 40px;
 
-  }
-
-  #iframe{
-    translateX(20px);
   }
 }
