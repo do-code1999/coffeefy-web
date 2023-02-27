@@ -1,0 +1,392 @@
+:root{
+  --bg: #3C3C43;
+  --black: #201f1f;
+  --text: #FFFFFF;
+  --brown: #FF4820;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  
+  scroll-behavior: smooth;
+}
+
+html{
+  background-color: var(--bg);
+}
+
+body{
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+
+#header{
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+
+#header-img{
+  display: flex;
+  width: 60px;
+  object-fit: contain;
+}
+
+#nav-bar{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  background-color: var(--brown);
+  padding: 10px;
+}
+
+.nav-links{
+  display: flex;
+  list-style: none;
+}
+
+.the-product{
+  color: var(--text);
+  font-size: 25px;
+  margin-left: 10px;
+  font-weight: 700;
+  font-family:Arial, Helvetica, sans-serif;
+}
+
+.the-product:hover{
+  cursor: arrow;
+}
+
+.nav-links li{
+  display: inline-block;
+  padding: 10px 10px;
+}
+.nav-links a{
+  text-decoration: none;
+  font-size: 15px;
+  color: var(--text);
+  padding: 10px 10px;
+  margin: 10px 10px;
+}
+
+.nav-links li .nav-link:hover{
+  border-bottom: 3px solid #64230D;
+  border-bottom-color:#64230D;
+  width: 40%;
+  height: 20vh;
+  padding: 10px;
+  transition: -1s ease;
+}
+
+.logo-container{
+  display: flex;
+  align-items: center;
+}
+
+.cover{
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)),
+                    url("https://media.istockphoto.com/id/477832532/photo/coffee-sill-life-with-cup-of-coffee.jpg?s=612x612&w=0&k=20&c=gwOupjoxUjcxmOwtrHYrDmLYNX2ipWTzHX3mYRSfQZg=");
+  background-size: cover;
+  background-position: center;
+}
+
+#email-section{
+  width: 100%;
+  position:absolute;
+  top: 30%;
+  transform: translateY(30%);
+  justify-content: center;
+  margin: 40px 20px;
+  text-align: center;
+}
+
+#section::before{
+  display: flex;
+  content: " ";
+  margin-top: -100px;
+  height: 100px;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+input, #submit{
+  margin-top: 20px;
+}
+
+input{
+  padding: 8px;
+  border-radius: 20px;
+  width: 25%;
+  height: 20px;
+  border: 1px solid var(--brown);
+}
+
+#email::placeholder{
+  color: var(--brown);
+}
+
+#submit{
+  background-color: #240C04;
+  color: var(--text);
+  border: none;
+  border-radius: 20px;
+  width: 15%;
+  height: 40px;
+}
+
+#submit:hover{
+  cursor: pointer;
+  background-color: #64230D;
+  color: var(--text);
+}
+
+#submit:active{
+  background-color: #503503;
+  transition: all 0.25s;
+  -webkit-transition: all 0.25s;
+}
+
+h2{
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  color: var(--text);
+  margin-bottom: 10px;
+}
+
+.des{
+  margin-bottom: 30px;
+}
+
+.feature-head, .vid-brand, .prod-price{
+  color: var(--brown);
+  font-size: 34px;
+  text-align: center;
+}
+
+.vid-brand{
+  margin-top: 50px;
+}
+
+.prod-par{
+  color: var(--text);
+  font-size: 15px;
+  text-align: center;
+}
+
+.des{
+  margin-bottom: 40px;
+}
+
+.icon{
+  color: var(--brown);
+  margin-right: 30px;
+}
+
+.features{
+  text-align: left;
+  justify-content: center;
+  max-width: 800px;
+  margin: auto;
+}
+
+.feature{
+  display: flex;
+  flex-direction: row;
+}
+
+.description{
+  padding: 5px;
+  color: var(--text);
+}
+
+#video{
+  display: flex;
+  margin: auto;
+  padding: 95px;
+  justify-content: center;
+}
+
+.product-img-card {
+  width: 100%;
+  height: 200px;
+  margin-top: 10px;
+  object-fit: cover;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+  border-bottom-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+  transition: 0.5s ease;
+}
+
+.product-img-card:hover{
+  opacity: 0.8;
+}
+.coffee-name, p, h6{
+  color: var(--text);
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  margin-top: 8px;
+}
+
+.products{
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  padding: 40px;
+  margin-top: 40px;
+  margin-bottom: 10px;
+}
+
+.products .product-card{
+  width: 300px;
+  position: relative;
+  margin: 20px 20px;
+  padding: 30px 30px;
+  display: flex;
+  flex-direction: column;
+}
+.product-card {
+  border: 1px solid var(--brown);
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  background-color: var(--brown);
+  float: left;
+  width: 25%;
+  padding: 0 10px;
+  text-align: center;
+  justify-content: center;
+}
+
+.product-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.coffee-name, .par, h6{
+  margin-bottom: 5px;
+}
+h6{
+  font-size: 15px;
+}
+
+button{
+  padding: 12.5px 30px;
+  border: 0;
+  border-radius: 100px;
+  background-color: #240C04;
+  color: var(--text);
+  font-weight: Bold;
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+}
+
+button:hover{
+  background-color: #64230D;
+  cursor: pointer;
+}
+
+button:active{
+  background-color: #503503;
+  transition: all 0.25s;
+  -webkit-transition: all 0.25s;
+  box-shadow: none;
+}
+
+.footer{
+  background-color: #141D2C;
+  width: 100%;
+  margin-top: 30px;
+  padding: 10px;
+  text-align: right;
+}
+
+#footer{
+  margin-top: 10px;
+}
+
+.li{
+  text-decoration: none;
+  color: var(--text);
+}
+.list{
+  color: var(--text);
+  font-size: 20px;
+}
+
+.lists{
+  color: var(--text);
+  padding: 0 20px;
+}
+
+.footlist{
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+
+.footlist .list{
+  display: inline-block;
+  flex-direction: row;
+  text-align: center;
+  align-items: center;
+  justify-content: center;;
+  list-style: none;
+  margin: 10px;
+}
+
+.list:hover,.li:hover{
+  cursor: pointer;
+  color: var(--brown);
+}
+
+.lists{
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+
+@media only screen and (max-width: 600px){
+
+  #email-section{
+    margin: 0 auto;
+    padding: 20px;
+
+  }
+
+  .feature-head, .prod-par{
+    display: absolute;
+    flex-direction: column;
+  }
+
+  #email{
+    border-radius: 20px;
+    width: 35%;
+    height: 20px;
+    margin-bottom: 10px;
+
+  }
+
+  #submit{
+  border-radius: 20px;
+  width: 25%;
+  height: 40px;
+
+  }
+
+  #iframe{
+    translateX(20px);
+  }
+}
